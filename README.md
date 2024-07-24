@@ -1,39 +1,48 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# BlendMask
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+BlendMask is a Flutter widget that allows you to apply blend modes and opacity to its child widget. This can be useful for creating various visual effects such as overlays, blending images, and achieving custom compositing effects in your Flutter applications.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Blend Modes:** Apply any of the supported blend modes to the child widget.
+- **Opacity Control:** Adjust the opacity of the blend mask to achieve the desired level of transparency.
+- **Easy to Use:** Simply wrap your widget with `BlendMask` and specify the blend mode and opacity.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add `blendmask` to your `pubspec.yaml`:
 
+```yaml
+dependencies:
+  blendmask: ^0.0.1
+```
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+Stack(
+      alignment: Alignment.center,
+      children: [
+        Image.network("https://images.dog.ceo/breeds/akita/Akita_Inu_dog.jpg"),
+        Positioned(
+          right: 0,
+          top: 60,
+          bottom: 60,
+          child: BlendMask(
+            blendMode: BlendMode.luminosity,
+            child: Image.network(
+                "https://images.dog.ceo/breeds/spaniel-irish/n02102973_634.jpg"),
+          ),
+        ),
+        BlendMask(
+          blendMode: BlendMode.overlay,
+          child: Text(
+            'HELLO WORLD!',
+            style: Theme.of(context)
+                .textTheme
+                .headlineLarge!
+                .copyWith(fontWeight: FontWeight.bold, fontSize: 52),
+          ),
+        ),
+      ],
+    )
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
