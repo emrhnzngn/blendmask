@@ -18,7 +18,7 @@ dependencies:
 ```
 ## Usage
 
-<img src="https://raw.githubusercontent.com/emrhnzngn/blendmask/main/example.png" alt="Example" width="400"/>
+<img src="https://raw.githubusercontent.com/emrhnzngn/blendmask/main/example.png" alt="Example" height="200"/>
 ```dart
 Stack(
       alignment: Alignment.center,
