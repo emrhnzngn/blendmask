@@ -17,7 +17,8 @@ dependencies:
   blendmask: ^0.0.1
 ```
 ## Usage
-![BlendMask Example](https://raw.githubusercontent.com/emrhnzngn/blendmask/main/example.png)
+
+<img src="https://raw.githubusercontent.com/emrhnzngn/blendmask/main/example.png" alt="Example" width="400"/>
 ```dart
 Stack(
       alignment: Alignment.center,
