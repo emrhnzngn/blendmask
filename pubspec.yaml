@@ -1,0 +1,20 @@
+name: blendmask
+description: "A Flutter widget to apply blend modes and opacity effects to child widgets."
+version: 0.0.1
+repository: https://github.com/emrhnzngn/blendmask
+issue_tracker: https://github.com/emrhnzngn/blendmask/issues
+homepage: https://github.com/emrhnzngn/blendmask
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+flutter:
